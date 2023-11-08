@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-__import__("os").write(1, "#pythoniscool\n".encode("UTF-8"))
-
+exec("".join([chr(i) for i in [35, 112, 121, 116, 104, 111, 110, 105, 115, 99, 111, 111, 108]]) + "\n")
