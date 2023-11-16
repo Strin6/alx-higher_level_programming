@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 def only_diff_elements(set_1, set_2):
-    new_set = set()
-    for elements in (set_1 and set_2):
-        if elements not in set_1 and set_2:
-            new_set.add(elements)
+    # Combine both sets to find all unique elements
+    all_elements = set_1.union(set_2)
 
-    return new_set
+    # Find elements that are exclusive to each set
+    only_diff_set = set()
+    for element in all_elements:
+        if (element in set_1) ^ (element in set_2):
+            only_diff_set.add(element)
+
+    return only_diff_set
