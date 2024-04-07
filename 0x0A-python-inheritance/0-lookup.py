@@ -1,13 +1,10 @@
 #!/usr/bin/python3
+
 def lookup(obj):
-    """ Function that returns the list of available attributes
-        and methods of an object
+    # Get all attributes and methods of the object
+    all_attributes_and_methods = dir(obj)
 
-    Args:
-        obj: instance of the class
+    # Filter out the attributes and methods that start with underscores
+    filtered_attributes_and_methods = [attr for attr in all_attributes_and_methods if not attr.startswith('_')]
 
-    Returns:
-        List of attributes
-    """
-
-    return dir(obj)
+    return filtered_attributes_and_methods
